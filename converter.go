@@ -2,30 +2,45 @@ package main
 
 import "fmt"
 
+//Converter struct for various units
 type Converter struct{ Centimeter, Feet, Minutes, Seconds, Kilograms, Pounds, Fahrenheit, Celsius float64 }
 
+//CentimeterToFeet converter
 func (cvr Converter) CentimeterToFeet() float64 {
 	return cvr.Feet * 30.48
 }
 
+//FeetToCentimeter converter
 func (cvr Converter) FeetToCentimeter() float64 {
 	return cvr.Centimeter * 0.0328084
 }
+
+//MinutesToSeconds converter
 func (cvr Converter) MinutesToSeconds() float64 {
 	return cvr.Minutes * 60
 }
+
+//SecondsToMilliseconds converter
 func (cvr Converter) SecondsToMilliseconds() float64 {
 	return cvr.Seconds * 1000
 }
+
+//PoundsToKilograms converter
 func (cvr Converter) PoundsToKilograms() float64 {
 	return cvr.Pounds * 0.454
 }
+
+//KilogramsToPounds converter
 func (cvr Converter) KilogramsToPounds() float64 {
 	return cvr.Kilograms * 2.205
 }
+
+//FahrenheitToCelsius converter
 func (cvr Converter) FahrenheitToCelsius() float64 {
 	return ((cvr.Fahrenheit - 32) * (9 / 5))
 }
+
+//CelsiusToFahrenheit converter
 func (cvr Converter) CelsiusToFahrenheit() float64 {
 	return ((cvr.Celsius * (9 / 5)) + 32)
 }
