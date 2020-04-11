@@ -31,7 +31,7 @@ func (cvr Converter) CelsiusToFahrenheit() float64 {
 }
 func main() {
 
-	cvr := Converter{3, 5, 8, 6, 5, 10, 67, 35}
+	cvr := Converter{152.4, 5, 8, 6, 4.54, 10, 67, 35}
 	fmt.Println(cvr.Feet, "feet is: ", cvr.CentimeterToFeet(), "centimeter")
 	fmt.Println(cvr.Centimeter, "centimeter is: ", cvr.FeetToCentimeter(), "feet")
 	fmt.Println(cvr.Minutes, "Minutes is: ", cvr.MinutesToSeconds(), "seconds")
